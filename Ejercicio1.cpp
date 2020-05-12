@@ -1,16 +1,22 @@
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
-int main (){
+int main (void)
+{
+    int a, b, c;
+    float total;
 
-    int numero;
+    cout << "Hola, soy un programa que puede darte un promedio de tres numeros." << endl << "Ingrese su primer numero:" << endl;
+    cin >> a;
+    cout << "Ingrese su segundo numero:" << endl;
+    cin >> b;
+    cout << "Ingrese su tercer numero:" << endl;
+    cin >> c;
 
-    cout<<"Ingresa un numero porfavor";
-    cin>>numero;
+    total = (float) (a + b + c)/3;
 
-    cout<<numero;
-
-    return 0;
-
+    cout << "Este es el resultado: " << total;
+    
 }

@@ -18,4 +18,6 @@ int main (void)
     perim = 2 * pi * rad;
 
     cout << "Su perimetro es: " << perim << endl;
+
+    return 0;
 }

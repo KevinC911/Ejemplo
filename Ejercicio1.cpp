@@ -18,5 +18,7 @@ int main (void)
     total = (float) (a + b + c)/3;
 
     cout << "Este es el resultado: " << total;
+
+    return 0;
     
 }

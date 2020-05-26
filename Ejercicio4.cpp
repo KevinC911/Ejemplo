@@ -19,4 +19,6 @@ int main (void){
     cout << "Su factura:" << endl;
     cout << producto << "   $" << total;
 
+    return 0;
+
 }

@@ -57,7 +57,7 @@ void CompFechaMan(){
     }
     else
     {
-      cerr << "El mes " << mes << " no tiene " << dia << " dias "<< endl;  
+      cout << "El mes " << mes << " no tiene " << dia << " dias "<< endl;  
       exit(1);
     }
   }

@@ -12,7 +12,7 @@ float precio;
 float costoPorArticulo;
 };
 
-void LecturaArt(struct costoPorArticulo C[], int n);
+void LecturaArt(struct costoPorArticulo C[], int n); //Declaracion de funciones
 void CostArt(struct costoPorArticulo A[], int n);
 void DespArt(struct costoPorArticulo B[], int n);
 float TotalArts(struct costoPorArticulo D[], int n);
@@ -22,9 +22,9 @@ int main(void){
     cout << "\\\\\\\\\\\\\\\\BIENVENIDO AL ASISTENTE DE COMPRA///////////" << endl;
     cout << "¿Cuantas compras desea realizar?" << endl;
     cin >> n;
-    cin.ignore(100, '\n');
+    cin.ignore(100, '\n'); //Para limpiar el Buffer del teclado
     cout << "Ahora ingrese el nombre del articulo, el precio y la cantidad que desea comprar" << endl;
-    costoPorArticulo Compras[n];
+    costoPorArticulo Compras[n]; //Declaracion del arreglo en la estructura
     LecturaArt(Compras, n);
     CostArt(Compras, n);
     DespArt(Compras, n);
@@ -37,15 +37,15 @@ void LecturaArt(struct costoPorArticulo C[], int n){
     string Art;
     for(int i = 0; i < n; i++){
         cout << "Nombre del articulo: ";
-        getline(cin, Art, '\n');
-        strncpy(C[i].nombreArticul, Art.c_str(), longCad);
-        C[i].nombreArticul[longCad+1] = '\0';
+        getline(cin, Art, '\n'); //Asi para considerar los espacios y se escriban frases
+        strncpy(C[i].nombreArticul, Art.c_str(), longCad); //Para convertir el string a charArray[]
+        C[i].nombreArticul[longCad+1] = '\0'; //En caso de que la frase sea mas larga que el charArray[]
         cout << "Precio del articulo: ";
         cin >> C[i].precio;
         cout << "La cantidad que desea comprar: ";
         cin >> C[i].cantidad;
         cout << "-----------------------------------" << endl;
-        cin.ignore(100, '\n');
+        cin.ignore(100, '\n'); //Para limpiar el buffer de modo que no salgan errores con los int y el string
     }
 }
 
